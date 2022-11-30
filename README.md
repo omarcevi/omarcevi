@@ -14,11 +14,7 @@ You can click the Preview link to take a look at your changes.
 ## I'm a AI & ML engineer!!
 
 <!-- - 🔭 I just launched my first course: [Become A VS Code SuperHero!][course]! -->
-- 🔭 Soon planning on opening my own AI & ML channel on instagram and tiktok
-- 🌱 I’m currently learning everything 🤣
-- 👯 I’m looking to collaborate with other content creators
-- 🥅 2022 Goals: Contribute more to Open Source projects
-- ⚡ Fun fact: I watch F1 races, and play games from time to time
+- 🌱 I’m currently developing myself in Deep Learning and MLOps
 
 
   <summary>:zap: GitHub Stats</summary>
