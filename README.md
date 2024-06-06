@@ -1,4 +1,4 @@
-<!--- 👋 Hi, I’m @omarcevi
+<!--- 👋 Hi, I’m Omar
 - 👀 I’m interested in Python and Machine Learning
 - 🌱 I’m currently learning and developing my skills in the Machine learning and AI field 
 - 💞️ I’m looking to collaborate on Python Machine learning projects 
