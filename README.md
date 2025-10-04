@@ -11,7 +11,7 @@ You can click the Preview link to take a look at your changes.
 
 ### Hi there, I'm Omar 👋 
 
-## I'm a AI & ML engineer!!
+## I'm an AI & ML engineer!!
 
 <!-- - 🔭 I just launched my first course: [Become A VS Code SuperHero!][course]! -->
 - 🌱 I’m currently developing myself in Deep Learning and MLOps
