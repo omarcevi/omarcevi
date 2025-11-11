@@ -16,14 +16,6 @@ You can click the Preview link to take a look at your changes.
 <!-- - 🔭 I just launched my first course: [Become A VS Code SuperHero!][course]! -->
 - 🌱 I’m currently developing myself in Deep Learning and MLOps
 
-
-  <summary>:zap: GitHub Stats</summary>
-  
-
-  <img align="left" alt="omarcevi's GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=omarcevi&show_icons=true&hide_border=true" />
-
-
-
 <!-- [website]:  -->
 <!-- [twitter]:  -->
 <!-- [youtube]:  -->
