@@ -1,0 +1,77 @@
+name: Update profile
+
+on:
+  schedule:
+    - cron: "23 4 * * *"   # daily, 07:23 Istanbul time
+  workflow_dispatch:        # run it by hand from the Actions tab
+  push:
+    branches: [main]
+    paths:
+      - contributions.txt
+      - scripts/**
+      - tests/**
+      - .github/workflows/update-profile.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: update-profile
+  cancel-in-progress: false
+
+jobs:
+  # Third-party code runs here, with a read-only token and pinned to a reviewed commit.
+  graph:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Draw the 3D contribution graph
+        uses: yoshi389111/github-profile-3d-contrib@7d95e7d4cdc028dd1e1cbd957d65f35efb12ae39 # v0.9.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+      - uses: actions/upload-artifact@v7
+        with:
+          name: profile-3d-contrib
+          path: profile-3d-contrib/
+
+  update:
+    needs: graph
+    if: ${{ !cancelled() }}   # still update the text sections if the graph failed
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Test the README updater
+        run: python -m unittest discover -s tests
+
+      - name: Bring in the new 3D graph
+        if: ${{ needs.graph.result == 'success' }}
+        uses: actions/download-artifact@v8
+        with:
+          name: profile-3d-contrib
+          path: profile-3d-contrib/
+
+      - name: Update Speaking, Writing and Open source
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/update_readme.py
+
+      # Runs even if one source failed above, so the sections that did update still get saved.
+      - name: Commit if anything changed
+        if: ${{ !cancelled() }}
+        run: |
+          git add README.md
+          if [ -d profile-3d-contrib ]; then git add profile-3d-contrib; fi
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update profile"
+          git push

@@ -1,0 +1,6 @@
+# Pull requests to list under "Open source" on the profile, one URL per line.
+# Merged PRs to other people's public repos are found automatically, so only add
+# ones that landed another way. Google, for example, lands outside PRs through its
+# internal tool, which closes the PR on GitHub instead of merging it.
+# Put " | Title" after a URL to show your own title instead of the PR's.
+https://github.com/google/adk-python/pull/3037 | Fix parameter filtering for CrewAI tools that take **kwargs
