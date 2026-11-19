@@ -23,11 +23,11 @@ Google Developer Expert, Cloud AI · GDG Istanbul co-organizer · Istanbul
 ## 🎤 Speaking
 
 <!-- SPEAKING:START -->
-**Next:** [Finansal Verilerle Yapay Zekâyı Buluşturmak](https://omarcevi.dev/workshops/pytorch-finance-workshop/) · Işık IEEE Computer Society · 18 November 2026 · workshop
+**Next:** [Retrieval Is All You Need (Almost)](https://gdg.community.dev/events/details/google-gdg-izmir-presents-devfest-izmir-2026/cohost-gdg-cloud-izmir) · DevFest İzmir 2026 · 5 December 2026
 
+- [Finansal Verilerle Yapay Zekâyı Buluşturmak](https://omarcevi.dev/workshops/pytorch-finance-workshop/) · Işık IEEE Computer Society · workshop
 - [Build Your Coding Agent with Google ADK](https://omarcevi.dev/workshops/coding-agent-workshop/) · DevFest Kocaeli 2026 · workshop
 - [Building Trabzonspor's AI Analysis Room](https://omarcevi.dev/workshops/match-day-agents/) · DevFest Trabzon 2026 · workshop
-- [Deploying your agents on Google Cloud Agent Platform](https://omarcevi.dev/workshops/cloud-agents-workshop/) · Google Cloud Day Türkiye – Builder Connect · workshop
 
 [All talks and workshops →](https://omarcevi.dev/#speaking)
 <!-- SPEAKING:END -->
